@@ -41,10 +41,10 @@
         },
         goTo: function(index) {
           $('.screen').eq(index).addClass('active');
-          return $('.dot').eq(index).addClass('active');
+          return $('.dot1').eq(index).addClass('active');
         },
         reset: function() {
-          return $('.screen, .dot').removeClass('active');
+          return $('.screen, .dot1').removeClass('active');
         },
         indexMax: function() {
           return $('.screen').length - 1;
