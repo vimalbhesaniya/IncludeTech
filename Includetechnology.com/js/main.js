@@ -4,10 +4,10 @@
     // Spinner
     var spinner = function () {
         setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
+            if ($('.dots-container').length > 0) {
+                $('.dots-container').addClass('d-none');
             }
-        }, 1);
+        }, 700);
     };
     spinner();
 
@@ -149,3 +149,23 @@ $(".box") .click (function () {
 
 
 
+
+function handleOpen(openId) {
+  document.querySelectorAll(".isOpen").forEach((e) => {
+    e.style.display = "none";
+  });
+  document.querySelectorAll(".activeTab").forEach((e) => {
+    e.style.color = "black";
+  });
+  document.querySelectorAll(".activePost").forEach((e) => {
+    e.classList.remove("hidePost");
+  });
+  document.querySelectorAll(".isOpen").item(openId).style.display = "block";
+  document.querySelectorAll(`.activeTab`).item(openId).style.color = "#0582ae";
+  document
+    .querySelectorAll(`.activePost`)
+    .item(openId)
+    .classList.add("hidePost");
+}
+
+handleOpen(0);

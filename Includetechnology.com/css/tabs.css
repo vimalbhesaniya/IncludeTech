@@ -977,3 +977,11 @@ list-style: none !important;
 .pcss3t > ul > li {
 	min-height: 370px;
 }
+@media (max-width:420px) {
+
+	.pcss3t>ul,
+	.pcss3t>ul>li {
+		min-height: 700px;
+	}
+
+}
